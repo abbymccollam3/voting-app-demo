@@ -1,0 +1,13 @@
+apiVesion: v1
+kind: Service
+metadata:
+  - name: redis # instead of having to remember IP of Service, you can send to DNS name (redis)
+    labels:
+      app: redis
+spec:
+  ports:
+    - name: "redis-service"
+      port: 6379 # port that service is listening on
+      targetPort: 6379 # port should it forward to on the container
+  selector: # what port should it forward traffic to
+    app: redis # forward to any pod with this label
