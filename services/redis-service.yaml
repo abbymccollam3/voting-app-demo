@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  - name: redis # instead of having to remember IP of Service, you can send to DNS name (redis)
+    name: redis # instead of having to remember IP of Service, you can send to DNS name (redis)
     labels:
       app: redis
 spec:
