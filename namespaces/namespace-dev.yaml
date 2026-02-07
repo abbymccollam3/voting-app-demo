@@ -1,4 +1,4 @@
 apiVersion: v1
-kind: Deployment
+kind: Namespace
 metadata:
-  name: result
+  name: dev
