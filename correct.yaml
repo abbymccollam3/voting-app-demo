@@ -1,0 +1,12 @@
+init_config:
+instances:
+  - dbm: true
+    host: '<HOSTNAME>,<PORT>'
+    username: datadog
+    password: 'ENC[datadog_user_database_password]'
+    connector: adodbapi
+    adoprovider: MSOLEDBSQL
+    # Optional: For additional tags
+    tags:  
+      - 'service:<CUSTOM_SERVICE>'
+      - 'env:<CUSTOM_ENV>'
