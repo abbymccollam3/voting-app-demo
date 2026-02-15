@@ -6,7 +6,7 @@ metadata:
     app: vote
 spec:
   replicas: 1 # how many instances of the voting app
-  selector: # after it creates pod, which pods shoult it watch over
+  selector: # after it creates pod, which pods should it watch over
     matchLabels:
       app: vote
   template: # what pod are you interested in creating
