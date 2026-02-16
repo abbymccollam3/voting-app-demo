@@ -1,0 +1,17 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: scheduling.k8s.io/v1
+description: Used for system critical pods that must not be moved from their current
+  node.
+kind: PriorityClass
+metadata:
+  creationTimestamp: "2026-02-15T22:02:13Z"
+  generation: 1
+  name: high-priority
+  resourceVersion: "68"
+  uid: 6a671cbf-567e-41a2-9b3e-bc18b5125162
+globalDefault: true
+preemptionPolicy: PreemptLowerPriority
+value: 100000
