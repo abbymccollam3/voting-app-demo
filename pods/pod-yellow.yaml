@@ -1,12 +1,41 @@
+spec:
+  initContainers:
+  - name: red-initcontainer
+    image: busybox
+    command:
+    - sh
+    - -c
+    - echo The app is running! && sleep 3600
+
+
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
 apiVersion: v1
 kind: Pod
 metadata:
-  name: yellow
-  labels:
-    app: yellow
+  creationTimestamp: "2026-02-19T14:05:29Z"
+  generation: 1
+  name: red
+  namespace: default
+  resourceVersion: "930"
+  uid: dccb1f4c-faee-48d8-beaf-d663f6e24bfc
 spec:
   containers:
-    - name: lemon
-      image: busybox
-    - name: gold
-      image: busybox
+  - command:
+    - sh
+    - -c
+    - echo The app is running! && sleep 3600
+    image: busybox:1.28
+    imagePullPolicy: IfNotPresent
+    name: red-container
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-dhndf
+      readOnly: true
+  dnsPolicy: ClusterFirst
+"/tmp/kubectl-edit-2080362514.yaml" 123L, 3374B
